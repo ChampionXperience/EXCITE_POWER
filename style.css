@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS document */
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1280px; /* Maximum width can be adjusted */
+    margin: 0 auto;
+    height: auto; /* Height will be determined by the content */
+}
+
+#main {
+    position: relative;
+    width: 100%;
+    height: auto; /* Ensure height is automatically determined */
+    overflow: hidden;
+}
+
+#main img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensure the image fits within its container while maintaining aspect ratio */
+}
+
+#range {
+    position: absolute;
+    width: 100%;
+    top: 5%;
+    height: 100%;
+    z-index: 2;
+    cursor: grabbing;
+    opacity: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+
+    #main img {
+        width: 100%;
+        height: auto;
+    }
+}
